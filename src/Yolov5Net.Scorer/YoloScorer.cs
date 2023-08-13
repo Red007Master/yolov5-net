@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Yolov5Net.Scorer.Extensions;
+using Yolov5Net.Scorer.Models;
 using Yolov5Net.Scorer.Models.Abstract;
 
 namespace Yolov5Net.Scorer;
@@ -258,10 +259,19 @@ public class YoloScorer<T> : IDisposable where T : YoloModel
         _model = Activator.CreateInstance<T>();
     }
 
+    public YoloScorer(UniversalModelConfig universalModelConfig)
+    {
+        _model = (T)Activator.CreateInstance(typeof(T), universalModelConfig);
+    }
+
     /// <summary>
     /// Creates new instance of YoloScorer with weights path and options.
     /// </summary>
     public YoloScorer(string weights, SessionOptions opts = null) : this()
+    {
+        _inferenceSession = new InferenceSession(File.ReadAllBytes(weights), opts ?? new SessionOptions());
+    }
+    public YoloScorer(string weights, UniversalModelConfig universalModelConfig, SessionOptions opts = null) : this(universalModelConfig)
     {
         _inferenceSession = new InferenceSession(File.ReadAllBytes(weights), opts ?? new SessionOptions());
     }

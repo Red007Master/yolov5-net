@@ -1,0 +1,551 @@
+{
+  "ModelName": "yolov5n",
+  "AutoDimensionsCount": true,
+  "Width": 640,
+  "Height": 640,
+  "Depth": 3,
+  "Dimensions": 85,
+  "Strides": [
+    8,
+    16,
+    32
+  ],
+  "Anchors": [
+    [
+      [
+        10,
+        13
+      ],
+      [
+        16,
+        30
+      ],
+      [
+        33,
+        23
+      ]
+    ],
+    [
+      [
+        30,
+        61
+      ],
+      [
+        62,
+        45
+      ],
+      [
+        59,
+        119
+      ]
+    ],
+    [
+      [
+        116,
+        90
+      ],
+      [
+        156,
+        198
+      ],
+      [
+        373,
+        326
+      ]
+    ]
+  ],
+  "Shapes": [
+    80,
+    40,
+    20
+  ],
+  "Confidence": 0.2,
+  "MulConfidence": 0.25,
+  "Overlap": 0.45,
+  "Outputs": [
+    "output"
+  ],
+  "Labels": [
+    {
+      "Id": 1,
+      "Name": "person",
+      "Kind": 0,
+      "Color": "Yellow"
+    },
+    {
+      "Id": 2,
+      "Name": "bicycle",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 3,
+      "Name": "car",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 4,
+      "Name": "motorcycle",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 5,
+      "Name": "airplane",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 6,
+      "Name": "bus",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 7,
+      "Name": "train",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 8,
+      "Name": "truck",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 9,
+      "Name": "boat",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 10,
+      "Name": "traffic light",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 11,
+      "Name": "fire hydrant",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 12,
+      "Name": "stop sign",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 13,
+      "Name": "parking meter",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 14,
+      "Name": "bench",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 15,
+      "Name": "bird",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 16,
+      "Name": "cat",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 17,
+      "Name": "dog",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 18,
+      "Name": "horse",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 19,
+      "Name": "sheep",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 20,
+      "Name": "cow",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 21,
+      "Name": "elephant",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 22,
+      "Name": "bear",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 23,
+      "Name": "zebra",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 24,
+      "Name": "giraffe",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 25,
+      "Name": "backpack",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 26,
+      "Name": "umbrella",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 27,
+      "Name": "handbag",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 28,
+      "Name": "tie",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 29,
+      "Name": "suitcase",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 30,
+      "Name": "frisbee",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 31,
+      "Name": "skis",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 32,
+      "Name": "snowboard",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 33,
+      "Name": "sports ball",
+      "Kind": 0,
+      "Color": "Blue"
+    },
+    {
+      "Id": 34,
+      "Name": "kite",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 35,
+      "Name": "baseball bat",
+      "Kind": 0,
+      "Color": "White"
+    },
+    {
+      "Id": 36,
+      "Name": "baseball glove",
+      "Kind": 0,
+      "Color": "White"
+    },
+    {
+      "Id": 37,
+      "Name": "skateboard",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 38,
+      "Name": "surfboard",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 39,
+      "Name": "tennis racket",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 40,
+      "Name": "bottle",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 41,
+      "Name": "wine glass",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 42,
+      "Name": "cup",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 43,
+      "Name": "fork",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 44,
+      "Name": "knife",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 45,
+      "Name": "spoon",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 46,
+      "Name": "bowl",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 47,
+      "Name": "banana",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 48,
+      "Name": "apple",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 49,
+      "Name": "sandwich",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 50,
+      "Name": "orange",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 51,
+      "Name": "broccoli",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 52,
+      "Name": "carrot",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 53,
+      "Name": "hot dog",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 54,
+      "Name": "pizza",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 55,
+      "Name": "donut",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 56,
+      "Name": "cake",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 57,
+      "Name": "chair",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 58,
+      "Name": "couch",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 59,
+      "Name": "potted plant",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 60,
+      "Name": "bed",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 61,
+      "Name": "dining table",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 62,
+      "Name": "toilet",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 63,
+      "Name": "tv",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 64,
+      "Name": "laptop",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 65,
+      "Name": "mouse",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 66,
+      "Name": "remote",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 67,
+      "Name": "keyboard",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 68,
+      "Name": "cell phone",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 69,
+      "Name": "microwave",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 70,
+      "Name": "oven",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 71,
+      "Name": "toaster",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 72,
+      "Name": "sink",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 73,
+      "Name": "refrigerator",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 74,
+      "Name": "book",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 75,
+      "Name": "clock",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 76,
+      "Name": "vase",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 77,
+      "Name": "scissors",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 78,
+      "Name": "teddy bear",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 79,
+      "Name": "hair drier",
+      "Kind": 0,
+      "Color": "Red"
+    },
+    {
+      "Id": 80,
+      "Name": "toothbrush",
+      "Kind": 0,
+      "Color": "Red"
+    }
+  ],
+  "UseDetect": true
+}

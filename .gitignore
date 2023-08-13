@@ -348,3 +348,72 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+
+#--------------VS-CODE--------------
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore build artifacts
+bin/
+obj/
+
+# Ignore NuGet packages
+packages/
+*.nupkg
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Ignore log files
+*.log
+
+# Ignore Resharper cache
+_ReSharper.*
+
+# Ignore Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Ignore macOS folder attributes
+.DS_Store
+
+# Ignore Visual Studio files
+.vspscc
+*.vssscc
+.vspscc
+
+# Ignore Rider files
+.idea/
+*.sln.iml
+
+# Ignore node_modules in case of web-related project
+node_modules/
+
+# Ignore SQLite database files
+*.sqlite
+*.sqlite3
+
+# Ignore compiled files
+*.dll
+*.exe
+*.pdb
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+
+# Ignore compiled Java files
+*.class
+
+# Ignore temporary files
+*.tmp
+*.swp
+*~
+
+# Ignore Mac .DS_Store files
+.DS_Store
+
