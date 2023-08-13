@@ -1,7 +1,7 @@
 # Yolov5Net
 YOLOv5 object detection with ML.NET, ONNX
 
-![example](https://raw.githubusercontent.com/techwingslab/yolov5-net/yolov5-net-Feature-Linux/img/result.jpg)
+![example](https://raw.githubusercontent.com/techwingslab/yolov5-net/feature-branch/img/result.jpg)
 
 ## Installation
 
