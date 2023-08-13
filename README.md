@@ -1,7 +1,7 @@
 # Yolov5Net
 YOLOv5 object detection with ML.NET, ONNX
 
-![example](https://raw.githubusercontent.com/techwingslab/yolov5-net/master/img/result.jpg)
+![example](https://raw.githubusercontent.com/techwingslab/yolov5-net/yolov5-net-Feature-Linux/img/result.jpg)
 
 ## Installation
 
@@ -33,43 +33,43 @@ If you have custom trained model, then inherit from YoloModel and override all t
 
 ```cs
 //Save config//
-        // string config1 = JsonConvert.SerializeObject(new YoloCocoP5Model());
-        // File.WriteAllText("Assets/Weights/saveExample.json", config1);
+// string config1 = JsonConvert.SerializeObject(new YoloCocoP5Model());
+// File.WriteAllText("Assets/Weights/saveExample.json", config1);
 
-        //Load config//
-        string config = File.ReadAllText("Assets/Weights/yolov5n.json"); //loading json string
-        UniversalModelConfig universalModelConfig = JsonConvert.DeserializeObject<UniversalModelConfig>(config); //deserializeing json string to config instance
+//Load config//
+string config = File.ReadAllText("Assets/Weights/yolov5n.json"); //loading json string
+UniversalModelConfig universalModelConfig = JsonConvert.DeserializeObject<UniversalModelConfig>(config); //deserializeing json string to config instance
 
 
-        using var image = await Image.LoadAsync<Rgba32>("Assets/test.jpg");
+using var image = await Image.LoadAsync<Rgba32>("Assets/test.jpg");
+{
+    //creating YoloScorer without universalModelConfig
+    //using var scorer = new YoloScorer<YoloCocoP5Model>("Assets/Weights/yolov5n.onnx");
+
+     //creating YoloScorer by passing weights path and universalModelConfig (<UniversalModel> is required!! if you want to use config)
+    using var scorer = new YoloScorer<UniversalModel>("Assets/Weights/yolov5n.onnx", universalModelConfig);
+    {
+        var predictions = scorer.Predict(image);
+
+         var font = new Font(new FontCollection().Add("Assets/consolas.ttf"), 16);
+
+         foreach (var prediction in predictions) // draw predictions
         {
-            //creating YoloScorer without universalModelConfig
-            //using var scorer = new YoloScorer<YoloCocoP5Model>("Assets/Weights/yolov5n.onnx");
+            var score = Math.Round(prediction.Score, 2);
 
-            //creating YoloScorer by passing weights path and universalModelConfig (<UniversalModel> is required!! if you want to use config)
-            using var scorer = new YoloScorer<UniversalModel>("Assets/Weights/yolov5n.onnx", universalModelConfig);
-            {
-                var predictions = scorer.Predict(image);
+             var (x, y) = (prediction.Rectangle.Left - 3, prediction.Rectangle.Top - 23);
 
-                var font = new Font(new FontCollection().Add("Assets/consolas.ttf"), 16);
+             image.Mutate(a => a.DrawPolygon(new Pen(prediction.Label.Color, 1),
+                new PointF(prediction.Rectangle.Left, prediction.Rectangle.Top),
+                new PointF(prediction.Rectangle.Right, prediction.Rectangle.Top),
+                new PointF(prediction.Rectangle.Right, prediction.Rectangle.Bottom),
+                new PointF(prediction.Rectangle.Left, prediction.Rectangle.Bottom)
+            ));
 
-                foreach (var prediction in predictions) // draw predictions
-                {
-                    var score = Math.Round(prediction.Score, 2);
-
-                    var (x, y) = (prediction.Rectangle.Left - 3, prediction.Rectangle.Top - 23);
-
-                    image.Mutate(a => a.DrawPolygon(new Pen(prediction.Label.Color, 1),
-                        new PointF(prediction.Rectangle.Left, prediction.Rectangle.Top),
-                        new PointF(prediction.Rectangle.Right, prediction.Rectangle.Top),
-                        new PointF(prediction.Rectangle.Right, prediction.Rectangle.Bottom),
-                        new PointF(prediction.Rectangle.Left, prediction.Rectangle.Bottom)
-                    ));
-
-                    image.Mutate(a => a.DrawText($"{prediction.Label.Name} ({score})", font, prediction.Label.Color, new PointF(x, y)));
-                }
-
-                await image.SaveAsync("Assets/result.jpg");
-            }
+             image.Mutate(a => a.DrawText($"{prediction.Label.Name} ({score})", font, prediction.Label.Color, new PointF(x, y)));
         }
+
+         await image.SaveAsync("Assets/result.jpg");
+    }
+}
 ```
