@@ -3,28 +3,6 @@ YOLOv5 object detection with ML.NET, ONNX
 
 ![example](https://github.com/Red007Master/yolov5-net-Feature-Linux/blob/feature-branch/img/result.jpg)
 
-## Installation
-
-Run this line from Package Manager Console:
-
-```
-Install-Package Yolov5Net -Version 1.1.0
-```
-
-For CPU usage run this line from Package Manager Console:
-
-```
-Install-Package Microsoft.ML.OnnxRuntime -Version 1.14.1
-```
-
-For GPU usage run this line from Package Manager Console:
-
-```
-Install-Package Microsoft.ML.OnnxRuntime.Gpu -Version 1.14.1
-```
-
-CPU and GPU packages can't be installed together.
-
 ## Usage
 
 Yolov5Net contains two COCO pre-defined models: YoloCocoP5Model, YoloCocoP6Model.
